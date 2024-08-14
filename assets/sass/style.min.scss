@@ -1,0 +1,278 @@
+@use"layout";
+@use"boot";
+@use"desktop.scss";
+
+:root {
+    --blue: #023b6d;
+    --light-blue: #00a6eb;
+    --red: #ec0606;
+    --black: #000;
+    --white: #fff;
+    --fade-color: #ffffff1a;
+}
+
+header {
+    z-index: 2;
+    position: fixed;
+
+    .bg-blue {
+        height: 2.5rem;
+        background-color: var(--blue);
+        color: var(--white);
+
+        .logo {
+            .img-fluid {
+                width: 180px;
+                height: 25px;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--white);
+                opacity: 0.7;
+            }
+
+            a:hover {
+                opacity: 1;
+            }
+        }
+
+        .comingSoon {
+            a {
+                text-decoration: none;
+                color: var(--white);
+            }
+        }
+
+        .download {
+            a {
+                text-decoration: none;
+                color: var(--white);
+            }
+
+            .bg-light-blue {
+                a {
+                    background-color: var(--light-blue);
+                    text-decoration: none;
+                    color: var(--white);
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .sub-header {
+        background-color: var(--black);
+        .text {
+            color: var(--white);
+        }
+
+        .desktop-menu {
+            .navbar {
+                .navbar-nav {
+                    .nav-item {
+                        opacity: 0.7;
+                        font-weight: 600;
+                    }
+
+                    .nav-item:hover {
+                        color: var(--white);
+                        border-bottom: 2px solid var(--red);
+                        opacity: 1;
+                    }
+
+                    .nav-item:first-child {
+                        color: var(--white);
+                        border-bottom: 2px solid var(--red);
+                        opacity: 1;
+                    }
+
+                    .nav-link {}
+                }
+            }
+        }
+
+        .mobile-menu {
+            .navbar-toggler{
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    .bg-image {
+        background-image: url("../images/bg-image.jpg");
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: -1;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(30%);
+        background-attachment: fixed;
+    }
+    .content {
+        position: absolute;
+        margin-top: 10rem;
+        color: var(--white);
+        .card-container{
+            .card{
+                background-color: transparent;
+                color: var(--white);
+                border: none;
+                .card-body{
+                    .card-title{
+                        font-size: 2.5rem;
+                    }
+                    .card-text{
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+            .count-down{
+                font-size: 1rem;
+                #demo1,
+                #demo2,
+                #demo3,
+                #demo4{
+                    border-top: 2px solid var(--red);
+                    background-color: #ffffff1a;
+                    width: 60px;
+                }
+            }
+        }
+        .subscribe{
+            form{
+                input.email{
+                    border: 1px solid #ebebeb46;
+                    background-color: var(--fade-color);
+                    border-right: none;
+                    border-radius: 10px 0 0 10px;
+                    outline: none;
+                    color: var(--white);
+                    width: 15rem;
+                }
+                input.submit{
+                    color: var(--white);
+                    background-color: var(--red);
+                    border: 1px solid var(--red);
+                    border-left: none;
+                    border-radius: 0 10px 10px 0;
+                }
+            }
+            .icons-section{
+                a{
+                    text-decoration: none;
+                }
+                .icon{
+                    text-decoration: none;
+                    font-size: 2rem;
+                    opacity: 0.5;
+                }
+                .icon:hover{
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+            }
+        }
+        .options{
+            .text-and-list{
+                line-height: 1.5;
+                .list-container{
+                    list-style: none;
+                    .list-option{
+                        line-height: 2;
+                        .red-color-icon{
+                            color: #ff0000;
+                        }
+                    }
+                }
+            }
+            .text{
+                line-height: 2;
+            }
+        }
+        .contact-info{
+            .contact-us{
+                .card-container-c{
+                    .card{
+                        color: var(--white);
+                        background-color: var(--fade-color);
+                        border: none;
+                        border-radius: 0;
+                        .card-body{
+                            .icon{
+                                font-size: 2rem;
+                                color: var(--red);
+                            }
+                            .card-title{
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                            }
+                            .card-text{
+                                font-size: 0.8rem;
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                }
+            }
+            .user-info{
+                .myForm{
+                    background-color: var(--fade-color);
+                    .bg-custom{
+                        background-color: #ffffff1a;
+                        border: none;
+                        outline: none;
+                        color: var(--white);
+                    }
+                    .bg-custom:focus{
+                        border: 1px solid var(--red);
+                    }
+                    .btn{
+                        background-color: var(--red);
+                        color: white !important;
+                    }
+                    .button-container{
+                        margin: 0.85rem 0;
+                    }
+                }
+            }
+        }
+        .footer{
+            .icons-section{
+                a{
+                    text-decoration: none;
+                }
+                .icon{
+                    text-decoration: none;
+                    font-size: 1.5rem;
+                    opacity: 0.5;
+                    border: 1px solid var(--white);
+                    border-radius: 10rem;
+                    color: var(--white);
+                }
+                .icon:hover{
+                    opacity: 1;
+                    transition: 0.3s;
+                    border-color: var(--red);
+                    color: var(--red);
+                }
+                .instagram{
+                    padding: 8px 10px;
+                }
+                .linkedin{
+                    padding: 10px 11px;
+                }
+            }
+            .red-color{
+                color: var(--red);       
+                font-weight: 600;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@media(min-width:768px) {
+    header {
+        .bg-blue {
+            .comingSoon {
+                text-align: center !important;
+            }
+        }
+    }
+
+    main {
+        .content {
+            .card-container {
+                #demo {
+
+                    #demo1,
+                    #demo2,
+                    #demo3,
+                    #demo4 {
+                        width: 100px !important;
+                    }
+                }
+            }
+
+            .subscribe {
+                form {
+                    input.email {
+                        width: 20rem !important;
+                    }
+                }
+            }
+        }
+    }
+    .contact-info{
+        .user-info{
+            margin: 0 !important;
+            .my-form{
+                margin: 0 !important;
+            }
+        }
+    }
+}
